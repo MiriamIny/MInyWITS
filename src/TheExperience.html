@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+        <title>Renaissance Palms Resort</title>
+        <link rel="icon" type="image/x-icon" href="c:\Users\miria\Pictures\Renaissance Palms flavicon.png">
+        <link rel="stylesheet" href="C:\Users\miria\Documents\ProductDevelopment\styles.css" />
+    </head>
+
+
+    <body style="background-color: blanchedalmond;">
+
+        <img src="c:\Users\miria\Documents\ProductDevelopment\logo.png" class="center" ></img>
+        <h1>Renaissance Palms Resort</h1>
+        <h2>where luxury meets the sea</h2>
+
+        <div class="slideshow">
+
+            <!-- Left and right arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            
+            <!-- Slides -->
+            <div class="slide fade">
+                <img src="c:\Users\miria\Documents\ProductDevelopment\beds.jpg" style="width:100%">
+                <div class="text-box">
+                    <h2>Beachfront Villas</h2>
+                    <p>
+                        • Plush bedding<br>
+                        • Flat-screen TVs<br>
+                        • Complimentary Wi-Fi<br>
+                        • Premium toiletries<br>
+                        • Direct beach access<br>
+                        • Private pools<br>
+                        • Beautiful views
+                    </p>
+                </div>
+            </div>
+        
+            <div class="slide fade">
+                <img src="c:\Users\miria\Documents\ProductDevelopment\dining.jpg" style="width:100%">
+                <div class="text-box">
+                    <h2>Exquisite Dining</h2>
+                    <p>
+                        • Signature Restaurant: Gourmet cuisine prepared with fresh, locally sourced ingredients<br>
+                        • Drinks: A variety of beverages including signature cocktails, fine wines, and fresh juices available throughout the resort<br>
+                        • Casual Dining: Relaxed dining options by the pool or beach, featuring light meals and refreshing drinks<br>
+                        • Room Service: 24-hour room service for those who prefer to dine in the comfort of their accommodations
+                    </p>
+                </div>
+            </div>
+        
+            <div class="slide fade">
+                <img src="c:\Users\miria\Documents\ProductDevelopment\gym.jpg" style="width:100%">
+                <div class="text-box">
+                    <h2>Relaxation and Wellness</h2>
+                    <p>
+                        • Spa Services: Rejuvenating treatments at our on-site spa<br>
+                        • Swimming Pools: Private pools, a family pool, and an infinity pool with ocean views<br>
+                        • Fitness Center: A well-equipped gym to stay active during your vacation
+                    </p>
+                </div>
+            </div>
+        
+            <div class="slide fade">
+                <img src="c:\Users\miria\Documents\ProductDevelopment\attractions.jpg" style="width:100%">
+                <div class="text-box">
+                    <h2>Adventure & Excursions</h2>
+                    <p>
+                        • Aquarium visits<br>
+                        • Horseback riding<br>
+                        • Boating adventures<br>
+                        • Dolphin swimming<br>
+                        • Snorkeling experiences
+                    </p>
+                </div>
+            </div>  
+        </div>
+                      
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+          
+            // Function to show the current slide
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+          
+            // Function to change slides when clicking arrows
+            function changeSlide(n) {
+              showSlides(slideIndex += n);
+            }
+          
+            // Function to show slides
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("slide");
+              let dots = document.getElementsByClassName("dot");
+          
+              if (n > slides.length) { slideIndex = 1; }
+              if (n < 1) { slideIndex = slides.length; }
+          
+              // Hide all slides
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+          
+              // Remove "active" class from all dots
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].style.backgroundColor = "#bbb";
+              }
+          
+              // Display the current slide and highlight the active dot
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+              dots[slideIndex - 1].style.backgroundColor = "#717171"; 
+            }
+        </script>
+          
+
+        <div class="image-button">
+            <img src="c:\Users\miria\Documents\ProductDevelopment\2.png" class="blurred-image" alt="Rennaissance Palms Beach Resort">
+            <a 
+                href="C:\Users\miria\Documents\ProductDevelopment\BookNow.html">
+                <button class="btn">Book Your Experience NOW!</button>
+            </a>
+        </div>
+
+        <h2> It's more than a destination; it's a rejuvenating escape.</p>
+    
+    </body>
+
+</html>
