@@ -26,9 +26,9 @@ Git Hub Username: [MiriamIny](https://github.com/MiriamIny)
     - *obviously*!!
 - Let's learn about branches!
 
-### Project 1: Rennaissance Palms Resort
-## HTML website using CSS style
-## Resort website: descriptive slides, click to book
+## Project 1: Rennaissance Palms Resort
+### HTML website using CSS style
+### Resort website: descriptive slides, click to book
 
 
 #               😀😀😀😀😀😀😀😀😀😀😀😀😀
