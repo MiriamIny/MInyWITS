@@ -1,7 +1,5 @@
 # MInyWITS
 ## Intro to Product Development
-
-
 ### Author: 
 Miriam Iny 
 Git Hub Username: [MiriamIny](https://github.com/MiriamIny)
@@ -23,7 +21,8 @@ Git Hub Username: [MiriamIny](https://github.com/MiriamIny)
     - 'cuz we want Mrs. Goldstone to mark them...
 - Have **FUN** 🎉
     - *obviously*!!
-#    
+
+#                       #WeLoveShalom    
 #               😀😀😀😀😀😀😀😀😀😀😀😀😀
 
 
