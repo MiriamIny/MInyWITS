@@ -22,7 +22,7 @@ Git Hub Username: [MiriamIny](https://github.com/MiriamIny)
 - Push homework assignments 💻
     - 'cuz we want Mrs. Goldstone to mark them...
 - Have **FUN** 🎉
-    - *obviously*!!
+    - why is git not recognizing the conflict here??
 #    
 #               🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁🙁    
 
