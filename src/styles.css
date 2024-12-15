@@ -166,4 +166,31 @@ a{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #83a9c594;
+}
+
+tr {
+    background-color: #83a9c594;
+}
+
+tr:hover {
+    background-color:blanchedalmond;
+}
+
   
