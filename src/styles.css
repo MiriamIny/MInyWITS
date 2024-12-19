@@ -13,7 +13,7 @@ p{
     display: block;
     margin: 0;
     padding: 15;
-    font-size: 20;
+    font-size: 18 px;
     color:rgb(14, 70, 89);
     background-color:#83a9c594;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -111,7 +111,6 @@ a{
 .slide img {
     width: 100%; /* Make the image fill the container */
     height: 100%; /* Set a fixed height */
-    object-fit: cover; /* Cover the area without stretching */
 }
 
 /* Text box style */
@@ -144,7 +143,6 @@ a{
     cursor: pointer;
     position: absolute;
     top: 50%; /* Center vertically */
-    width: auto;
     padding: 16px;
     color: rgba(0, 0, 0, 0.7); 
     font-weight: bold;
@@ -156,17 +154,22 @@ a{
 
 /* Position the "next" button to the right */
 .next {
-    right: 0;
+    right: 10px;
 }
 
 /* Position the "prev" button to the left */
 .prev {
-    left: 0;
+    left: 10px;
 }
 
 /* On hover, add a grey background color to the arrows */
 .prev:hover, .next:hover {
     color:#83a9c594;
+}
+/* Make sure arrows stay outside the image/text area, never overlapping */
+.slideshow .prev,
+.slideshow .next {
+    pointer-events: all; /* Enable interaction with arrows */
 }
 
 table {
@@ -224,4 +227,57 @@ tr {
 
 tr:hover {
     background-color: blanchedalmond;
+}
+
+/* Add media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .slideshow {
+        width: 90%; /* Reduce the width on smaller screens */
+    }
+    
+    .text-box {
+        max-width: 100%; /* Allow text box to use more width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    table {
+        width: 90%; /* Adjust table width */
+    }
+
+    p {
+        font-size: 14px; /* Adjust font size for readability */
+        width: 80%; /* Reduce width for mobile */
+    }
+
+    .image-button {
+        width: 90%; /* Adjust image button width */
+    }
+
+    .image-button .btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+/* Add media query for larger screens (e.g., desktops) */
+@media (min-width: 1024px) {
+    .slideshow {
+        width: 75%; /* Increase the width of the slideshow */
+    }
+
+    .text-box {
+        max-width: 70%; /* Limit text box width */
+    }
+
+    table {
+        width: 60%; /* Adjust table width for larger screens */
+    }
+
+    p {
+        font-size: 20px; /* Increase font size */
+        width: 50%; /* Adjust width for larger screens */
+    }
+
+    .image-button {
+        width: 60%; /* Increase image button width */
+    }
 }
