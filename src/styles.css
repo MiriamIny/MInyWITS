@@ -2,6 +2,7 @@ h1{
     color:rgb(14, 80, 104);
     text-align:center;
 }
+
 h2{
     color:#83a9c594;
     font-style:oblique;
@@ -12,7 +13,7 @@ p{
     display: block;
     margin: 0;
     padding: 15;
-    font-size: 20;
+    font-size: 18 px;
     color:rgb(14, 70, 89);
     background-color:#83a9c594;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -31,7 +32,7 @@ a{
     margin-left: auto;
     margin-right: auto;
     
-  }
+}
 
 .image-button {
     position: relative;
@@ -80,6 +81,9 @@ a{
 
 /* Style for slideshow */
 .slideshow {
+    display: flex; /*apply flex to the slideshow container*/
+    justify-content: center; /* Space out the elements inside */
+    align-items: center; /* Vertically center the items */
     width: 50%;
     position: relative;
     margin: auto;
@@ -107,7 +111,6 @@ a{
 .slide img {
     width: 100%; /* Make the image fill the container */
     height: 100%; /* Set a fixed height */
-    object-fit: cover; /* Cover the area without stretching */
 }
 
 /* Text box style */
@@ -118,7 +121,6 @@ a{
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    
     max-width: 600px; /* Limit max width */
     margin: 10px auto; /* Center the box horizontally */
 }
@@ -140,10 +142,9 @@ a{
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%; /* Centered vertically */
-    width: auto;
+    top: 50%; /* Center vertically */
     padding: 16px;
-    color: white;
+    color: rgba(0, 0, 0, 0.7); 
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -153,20 +154,23 @@ a{
 
 /* Position the "next" button to the right */
 .next {
-    right: 0;
+    right: 10px;
 }
 
 /* Position the "prev" button to the left */
 .prev {
-    left: 0;
+    left: 10px;
 }
 
 /* On hover, add a grey background color to the arrows */
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    color:#83a9c594;
 }
-
-
+/* Make sure arrows stay outside the image/text area, never overlapping */
+.slideshow .prev,
+.slideshow .next {
+    pointer-events: all; /* Enable interaction with arrows */
+}
 
 table {
     width: 75%;
@@ -193,4 +197,87 @@ tr:hover {
     background-color:blanchedalmond;
 }
 
-  
+.table-container {
+    display: grid;
+    justify-items: center; /* Centers table horizontally */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle; /* Ensures vertical centering of text */
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #83a9c594;
+}
+
+tr {
+    background-color: #83a9c594;
+}
+
+tr:hover {
+    background-color: blanchedalmond;
+}
+
+/* Add media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .slideshow {
+        width: 90%; /* Reduce the width on smaller screens */
+    }
+    
+    .text-box {
+        max-width: 100%; /* Allow text box to use more width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    table {
+        width: 90%; /* Adjust table width */
+    }
+
+    p {
+        font-size: 14px; /* Adjust font size for readability */
+        width: 80%; /* Reduce width for mobile */
+    }
+
+    .image-button {
+        width: 90%; /* Adjust image button width */
+    }
+
+    .image-button .btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+/* Add media query for larger screens (e.g., desktops) */
+@media (min-width: 1024px) {
+    .slideshow {
+        width: 75%; /* Increase the width of the slideshow */
+    }
+
+    .text-box {
+        max-width: 70%; /* Limit text box width */
+    }
+
+    table {
+        width: 60%; /* Adjust table width for larger screens */
+    }
+
+    p {
+        font-size: 20px; /* Increase font size */
+        width: 50%; /* Adjust width for larger screens */
+    }
+
+    .image-button {
+        width: 60%; /* Increase image button width */
+    }
+}
